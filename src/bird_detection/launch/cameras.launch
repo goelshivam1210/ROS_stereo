@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="left_serial" default="17473424"/>
+    <arg name="right_serial" default="17473425" />
+
+    <group ns="camera">
+        <group ns="left">
+            <node pkg="nodelet" type="nodelet" name="left_camera_manager" args="manager" />
+<!-- Left Camera -->
+            <node pkg="nodelet" type="nodelet" name="left_camera_nodelet"
+                  args="load pointgrey_camera_driver/PointGreyCameraNodelet left_camera_manager" >
+                <param name="frame_id" value="left" />
+                <param name="serial" value="$(arg left_serial)" />
+            </node>
+        </group>
+
+        <group ns="right">
+            <node pkg="nodelet" type="nodelet" name="right_camera_manager" args="manager" />
+
+            <!-- Right Camera -->
+            <node pkg="nodelet" type="nodelet" name="right_camera_nodelet"
+                  args="load pointgrey_camera_driver/PointGreyCameraNodelet right_camera_manager" >
+                <param name="frame_id" value="right" />
+                <param name="serial" value="$(arg right_serial)" />
+            </node>
+        </group>
+    </group>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/goelshivam12/Research/Bird_Deterrance/Object_Detection/ros_ws/devel
+
+Name: bird_detection
+Description: Description of bird_detection
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/goelshivam12/Research/Bird_Deterrance/Object_Detection/ros_ws/devel/lib 
+Requires: 

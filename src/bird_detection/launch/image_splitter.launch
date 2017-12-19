@@ -1,0 +1,5 @@
+<launch>
+ <node pkg = "bird_detection" type = "bird_detection_node" name = "frame0" output = "screen" >
+ <param name = "frame_number" value = "0"/>
+ </node>
+</launch>

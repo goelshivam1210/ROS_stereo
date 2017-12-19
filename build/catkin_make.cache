@@ -1,0 +1,2 @@
+bird_detection
+-DCATKIN_DEVEL_PREFIX=/home/goelshivam12/Research/Bird_Deterrance/Object_Detection/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/goelshivam12/Research/Bird_Deterrance/Object_Detection/ros_ws/install -G Unix Makefiles
